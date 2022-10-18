@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script type="text/javascript" src="../js/score_reserva.js"></script>
+    <link rel="stylesheet" type="text/css" href="./CSS/estilos.css">
+    <title>Rent a Car</title>
+</head>
+<body>
+    <h1>RENT A CAR</h1>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link disabled" href="../index.html">Home</a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/carros.html">Carros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./gama.html">Gama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./clientes.html">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="./mensaje.html">Mensaje</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="./reserva.html">Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="./admin.html">Admin</a>
+          </li>
+      </ul>
+
+    <div class="item" id="scoreReserva">
+        <h2>SCORE RESERVAS</h2>
+        <input type="number" id="scoreReserva" placeholder="Calificación">
+        <input type="text" id="mensajeReserva" placeholder="Mensaje">
+        <input type="number" id="idReserva" placeholder="Reserva">
+        <button onclick="leerScoreReserva()">Consultar</button>
+        <button onclick="guardarScoreReserva()">Insertar</button>
+        <div id="listaMensajes">
+
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundl
+e.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+crossorigin="anonymous"></script>
+</html>

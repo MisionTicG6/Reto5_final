@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../js/carros.js"></script>
+    <title>Rent a Car</title>
+</head>
+<body>
+    <h1 class="text-md-center m-4">RENT A CAR</h1>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./gama.html">Gama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./clientes.html">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./mensaje.html">Mensaje</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./reserva.html">Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./score_reserva.html">Score Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./admin.html">Admin</a>
+          </li>
+      </ul>
+<div  class="container">
+    <div class="item" id="car">
+        <h2>CARROS</h2>
+        <div id="listaCarros">
+          
+        </div>
+        <div id="formato" class="form-group containes text-center">
+        <input type="text" id="brandCar" placeholder="Brand">
+        <input type="text" id="nameCar" placeholder="Name">
+        <input type="text" id="modelCar" placeholder="Model">
+        <input type="text" id="descriptionCar" placeholder="Descripcion">
+        <input type="number" id="gamaCar" placeholder="Gama">
+        </div>
+        <div>
+        <button class="btn btn-primary" onclick="guardarCarros()"> Guardar </button>
+        </div>
+        
+        
+    </div>
+    <br>
+</div>
+</html>

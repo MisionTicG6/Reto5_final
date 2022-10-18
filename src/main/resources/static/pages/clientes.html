@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="../js/clientes.js"></script>
+    <title>Rent a Car</title>
+</head>
+<body>
+    <h1>RENT A CAR</h1>
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/carros.html">Carros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./gama.html">Gama</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="./mensaje.html">Mensaje</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link " href="./mensaje.html">Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./score_reserva.html">Score Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="./admin.html">Admin</a>
+          </li>
+      </ul>
+
+    <div class="item" id="client">
+        <h2>CLIENTES</h2>
+        <input type="text" id="nameClient" placeholder="Nombre">
+        <input type="email" id="mailClient" placeholder="Correo">
+        <input type="number" id="ageClient" placeholder="Edad">
+        <input type="password" id="passwordClient" placeholder="Contraseña">
+        <button onclick="guardarCliente()">Insertar</button>
+        <div id="listaClientes">
+
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
