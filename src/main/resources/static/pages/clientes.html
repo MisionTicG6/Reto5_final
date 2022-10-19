@@ -42,12 +42,28 @@
       <div  id="formato" class="container">
     <div class="item" id="client">
         <h2>CLIENTES</h2>
-        <div id="listaClientes"></div>
-        <input class="form-control m-3" style="width: 18em"  type="text" id="nameClient" placeholder="Nombre">
-        <input class="form-control m-3" style="width: 18em"  type="email" id="mailClient" placeholder="Correo">
-        <input class="form-control m-3" style="width: 18em"  type="number" id="ageClient" placeholder="Edad">
-        <input class="form-control m-3" style="width: 18em"  type="password" id="passwordClient" placeholder="Contraseña">
-        <button class="btn btn-primary" onclick="guardarCliente()">Insertar</button>
+        <form>
+            <div class="mb-3">
+                <label for="mailClient" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="mailClient" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+            </div>
+            <div class="mb-3">
+                <label for="nameClient" class="form-label">Nombres y Apellidos</label>
+                <input type="text" class="form-control" id="nameClient">
+            </div>
+            <div class="mb-3">
+                <label for="ageClient" class="form-label">Edad</label>
+                <input type="number" class="form-control" id="ageClient">
+            </div>
+            <div class="mb-3">
+                <label for="passwordClient" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="passwordClient">
+            </div>
+
+            <button type="submit" class="btn btn-primary" onclick="guardarCliente()">Enviar</button>
+        </form>
+
         <div id="listaClientes">
 
         </div>

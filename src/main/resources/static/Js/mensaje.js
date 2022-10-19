@@ -35,7 +35,7 @@ function pintarMensajes(respuesta) {
     for (i = 0; i < respuesta.length; i++) {
         myTable += "<tr>";
         myTable += "<td>" + respuesta[i].messageText + "</td>";
-        myTable += "<td><button onclick='borrarMensaje(" + respuesta[i].idMessage + ")'>Borrar</button>";
+        myTable += "<td><button class=\"btn btn-danger\" onclick='borrarMensaje(" + respuesta[i].idMessage + ")'>Borrar</button>";
         myTable += "</tr>";
     }
     myTable += "</table>";

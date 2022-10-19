@@ -2,11 +2,13 @@ $(document).ready(function(){
     leerReservas();
 })
 
+let URL = "http://localhost:8080/api/Reservation/";
+
 //////////////////////////////////////////////////////////////FUNCIONES RESERVA////////////////////////////////////////////////////////////////
 
 function leerReservas() {
     $.ajax({
-        url: "",
+        url: URL + "all",
         type: 'GET',
         dataType: 'JSON',
 
@@ -29,21 +31,20 @@ function pintarReservas(respuesta) {
 
     //declarar variables js
     let myTable = "<table>";
-    myTable += "<tr><th>Carrp</th><th>Cliente</th><th>FechaInicio</th><th>FechaEntrega</th></tr>";
+    myTable += "<tr><th>FechaInicio</th><th>FechaEntrega</th><th>Estado</th></tr>";
     for (i = 0; i < respuesta.length; i++) {
-        myTable += "<tr>";;
-        myTable += "<td>" + respuesta[i].reservaCar + "</td>";
-        myTable += "<td>" + respuesta[i].reservaClient + "</td>";
-        myTable += "<td>" + respuesta[i].FechaInicio + "</td>";
-        myTable += "<td>" + respuesta[i].FechaEntrega + "</td>"
-        myTable += "<td><button onclick='borrarCliente(" + items[i].id + ")'>Borrar</button>";
+        myTable += "<tr>";
+        myTable += "<td>" + respuesta[i].startDate + "</td>";
+        myTable += "<td>" + respuesta[i].devolutionDate + "</td>";
+        myTable += "<td>" + respuesta[i].status + "</td>"
+        myTable += "<td><button class=\"btn btn-danger\" onclick='borrarReserva(" + respuesta[i].idReservation + ")'>Borrar</button>";
         myTable += "</tr>";
     }
     myTable += "</table>";
     $("#listaReservas").append(myTable);
 }
 
-function guardarCliente() {
+function guardarReserva() {
     //Obtiene los valores de los input del formulario
     let carro = $("#reservaCar").val();
     let cliente = $("#reservaClient").val();
@@ -52,18 +53,17 @@ function guardarCliente() {
 
     //guarda los datos del formulario en un arreglo
     let data = {
-        car: carro,
-        client: cliente,
-        inicio: inicio,
-        entrega: entrega
+        idCar: carro,
+        idClient: cliente,
+        startDate: inicio,
+        devolutionDate: entrega
     };
 
     //convierte el arreglo en formato JSON
     let dataToSend = JSON.stringify(data);
 
-
     $.ajax({
-        url: "",
+        url: URL + "save",
         type: 'POST',
         //dataType: 'JSON',
         data: dataToSend,
@@ -81,4 +81,30 @@ function guardarCliente() {
         }
     }
     );
+}
+
+function borrarReserva(idElemento) {
+
+    let myData = { idCar: idElemento }
+    let dataToSend = JSON.stringify(myData);
+    $.ajax(
+        {
+            url: URL + idElemento,
+            type: 'DELETE',
+            data: dataToSend,
+            contentType: 'application/json',
+            datatype: "JSON",
+            success: function (respuesta) {
+                alert("Borrado exitoso");
+            },
+            error: function (xhr, status) {
+                alert('Operacion no satisfactoria,' + xhr.status);
+            },
+            //Muestra los clientes despues de borrarlos
+            complete: function () {
+                leerReservas();
+            }
+        }
+    );
+
 }

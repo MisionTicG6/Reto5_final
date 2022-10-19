@@ -32,7 +32,7 @@ function pintarGama(respuesta) {
         myTable += "<tr>";
         myTable += "<td>" + respuesta[i].name + "</td>";
         myTable += "<td>" + respuesta[i].description + "</td>";
-        myTable += "<td><button onclick='borrarGama(" + respuesta[i].idGama + ")'>Borrar</button>";
+        myTable += "<td><button class=\"btn btn-danger\" onclick='borrarGama(" + respuesta[i].idGama + ")'>Borrar</button>";
         myTable += "</tr>";
     }
     myTable += "</table>";

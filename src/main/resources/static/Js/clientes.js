@@ -31,14 +31,13 @@ function pintarClientes(respuesta) {
 
     //declarar variables js
     let myTable = "<table>";
-    myTable += "<tr><th>Nombre</th><th>Correo</th><th>Edad</th><th>Comtraseña</th></tr>";
+    myTable += "<tr><th>Nombre</th><th>Correo</th><th>Edad</th></tr>";
     for (i = 0; i < respuesta.length; i++) {
         myTable += "<tr>";;
         myTable += "<td>" + respuesta[i].name + "</td>";
         myTable += "<td>" + respuesta[i].email + "</td>";
-        myTable += "<td>" + respuesta[i].age + "</td>";
-        myTable += "<td>" + respuesta[i].password + "</td>"
-        myTable += "<td><button onclick='borrarCliente(" + respuesta[i].idClient + ")'>Borrar</button>";
+        myTable += "<td>" + respuesta[i].age + "</td>"
+        myTable += "<td><button class=\"btn btn-danger\" onclick='borrarCliente(" + respuesta[i].idClient + ")'>Borrar</button>";
         myTable += "</tr>";
     }
     myTable += "</table>";

@@ -28,18 +28,20 @@ function pintarCarros(respuesta) {
 
     $("#listaCarros").empty();
     //declarar variables js
-    let myTable = "<table>";
-    myTable += "<tr><th>Nombre</th><th>Marca</th><th>Modelo</th><th>Descripcion</th> </tr>";
+    let myTable = '<div class="container"> <div class="row">';
     for (i = 0; i < respuesta.length; i++) {
-        myTable += "<tr>";
-        myTable += "<td>" + respuesta[i].name + "</td>";
-        myTable += "<td>" + respuesta[i].brand + "</td>";
-        myTable += "<td>" + respuesta[i].year + "</td>";
-        myTable += "<td>" + respuesta[i].description + "</td>";
-        myTable += "<td><button onclick='borrarCarro(" + respuesta[i].idCar + ")'>Borrar</button>";
-        myTable += "</tr>";
+        myTable +=`
+            <div class="card m-2" style="width: 18rem;">
+              <div className="card-body">
+                <h5 className="card-title">${respuesta[i].brand}</h5>
+                <h6 className="card-subtitle mb-2 text-muted">${respuesta[i].year}</h6>
+                <p className="card-text">${respuesta[i].name}</p>
+                <button class="btn btn-danger" onclick="borrarCarro(${respuesta[i].idCar})">Borrar</button>
+              </div>
+             </div>
+             `
     }
-    myTable += "</table>";
+    myTable += "</div></div>";
     $("#listaCarros").append(myTable);
 }
 
