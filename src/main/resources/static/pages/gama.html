@@ -13,8 +13,8 @@
     <title>Rent a Car</title>
 </head>
 <body>
-    <h1>RENT A CAR</h1>
-    <ul class="nav">
+  <h1 class="text-md-center m-4">RENT A CAR</h1>
+  <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="../index.html">Home</a>
         </li>
@@ -37,16 +37,18 @@
             <a class="nav-link " href="./admin.html">Admin</a>
           </li>
       </ul>
-
+      <div  id="formato" class="container">
     <div class="item" id="gama">
         <h2>GAMA</h2>
-        <input type="text" id="nameGama" placeholder="Nombre">
-        <input type="text" id="descriptionGama" placeholder="Descripcion">
-        <button class="btn btn-danger" onclick="guardarGama()">Insertar</button>
+        <div id="listaGama"></div>
+        <input class="form-control m-3" style="width: 18em"  type="text" id="nameGama" placeholder="Nombre">
+        <input class="form-control m-3" style="width: 18em"  type="text" id="descriptionGama" placeholder="Descripcion">
+        <button class="btn btn-primary" class="btn btn-primary" onclick="guardarGama()">Insertar</button>
         <div id="listaGama">
 
         </div>
         
+    </div>
     </div>
     
 </body>

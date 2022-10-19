@@ -15,10 +15,10 @@
     <title>Rent a Car</title>
 </head>
 <body>
-    <h1>RENT A CAR</h1>
-    <ul class="nav">
+  <h1 class="text-md-center m-4">RENT A CAR</h1>
+  <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link disabled" href="../index.html">Home</a>
+          <a class="nav-link" href="../index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./pages/carros.html">Carros</a>
@@ -39,15 +39,19 @@
             <a class="nav-link " href="./admin.html">Admin</a>
           </li>
       </ul>
+
+    <div  id="formato" class="container">
     <div class="item" id="message">
         <h2>MENSAJE</h2>
-        <input type="text" id="mensaje" placeholder="Mensaje">
-        <input type="number" id="carro" placeholder="Carro">
-        <input type="number" id="cliente" placeholder="Cliente">
-        <button onclick="guardarMensaje()">Insertar</button>
+        <div id="listaMensajes"></div>
+        <input class="form-control m-3" style="width: 18em"  type="text" id="mensaje" placeholder="Mensaje">
+        <input class="form-control m-3" style="width: 18em"  type="number" id="carro" placeholder="Carro">
+        <input class="form-control m-3" style="width: 18em"  type="number" id="cliente" placeholder="Cliente">
+        <button class="btn btn-primary" onclick="guardarMensaje()">Insertar</button>
         <div id="listaMensajes">
 
         </div>
+    </div>
     </div>
 </body>
 </html>

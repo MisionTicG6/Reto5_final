@@ -15,8 +15,8 @@
     <title>Rent a Car</title>
 </head>
 <body>
-    <h1>RENT A CAR</h1>
-    <ul class="nav">
+  <h1 class="text-md-center m-4">RENT A CAR</h1>
+  <ul class="nav justify-content-center">
         <li class="nav-item">
           <a class="nav-link" href="../index.html">Home</a>
         </li>
@@ -39,17 +39,19 @@
             <a class="nav-link " href="./admin.html">Admin</a>
           </li>
       </ul>
-
+      <div  id="formato" class="container">
     <div class="item" id="client">
         <h2>CLIENTES</h2>
-        <input type="text" id="nameClient" placeholder="Nombre">
-        <input type="email" id="mailClient" placeholder="Correo">
-        <input type="number" id="ageClient" placeholder="Edad">
-        <input type="password" id="passwordClient" placeholder="Contraseña">
-        <button onclick="guardarCliente()">Insertar</button>
+        <div id="listaClientes"></div>
+        <input class="form-control m-3" style="width: 18em"  type="text" id="nameClient" placeholder="Nombre">
+        <input class="form-control m-3" style="width: 18em"  type="email" id="mailClient" placeholder="Correo">
+        <input class="form-control m-3" style="width: 18em"  type="number" id="ageClient" placeholder="Edad">
+        <input class="form-control m-3" style="width: 18em"  type="password" id="passwordClient" placeholder="Contraseña">
+        <button class="btn btn-primary" onclick="guardarCliente()">Insertar</button>
         <div id="listaClientes">
 
         </div>
+    </div>
     </div>
     
 </div>
